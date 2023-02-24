@@ -24,7 +24,7 @@ public class Application extends RouteBuilder {
                 + "${headers." + Exchange.HTTP_HOST + "}:"
                 + "${headers." + Exchange.HTTP_PORT + "}"
                 + "${headers." + Exchange.HTTP_PATH + "}")
-            .log(LoggingLevel.INFO, "muis_log_response_body : Backend response in.headers: \n${in.headers}")
-            .log(LoggingLevel.INFO, "muis_log_response_body : Backend response body: \n${body}");
+            .log(LoggingLevel.DEBUG, "muis_log_response_body : Backend response in.headers: ${in.headers}")
+            .log(LoggingLevel.DEBUG, "muis_log_response_body : Backend response body: ${body}");
     }
 }
